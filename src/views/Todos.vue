@@ -80,3 +80,17 @@ export default {
   }
 }
 </script>
+
+
+
+<style scoped>
+		select{
+			margin-top: -20px;
+			color: white;
+			padding: 2px;
+			border-radius: 50px;
+			background: rgb(152, 153, 151);
+			justify-content: start;
+			display: flex;
+		}
+</style>
