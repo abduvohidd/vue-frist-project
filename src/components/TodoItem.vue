@@ -1,11 +1,11 @@
 <template>
     <li>
-        <span>
-            <input type="checkbox">
+        <span :class="{done: todo.completed}">
+            <input type="checkbox" @change="todo.completed = !todo.completed">
             <strong>{{todo.id}}</strong>
             {{todo.title}}
         </span>
-        <button class="rm">&times;</button>
+        <button class="rm" @click="$emit('remove-todo', todo.id)">&times;</button>
     </li>
 </template>
 
@@ -36,5 +36,11 @@ export default{
         color: #fff;
         border-radius: 50%;
         font-weight: bold;
+    }
+    .done{
+        text-decoration: line-through;
+    }
+    input{
+        margin-right: 1rem;
     }
 </style>

@@ -4,6 +4,7 @@
     <hr>
     <TodoList
       :todos="todos"
+      @remove-todo="removeTodo"
     />
   </div>
 </template>
@@ -19,6 +20,11 @@ export default {
         {id:2, title:'Hello Samar', completed:false},
         {id:3, title:'Hello Vohid', completed:false}
       ]
+    }
+  },
+  methods:{
+    removeTodo(id){
+      this.todos= this.todos.filter(t => t.id !==id)
     }
   },
   components: {
