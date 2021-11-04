@@ -5,7 +5,7 @@
             <strong>{{todo.id}}</strong>
             {{todo.title}}
         </span>
-        <button>&times;</button>
+        <button class="rm">&times;</button>
     </li>
 </template>
 
@@ -21,3 +21,20 @@ export default{
     }
 }
 </script>
+
+
+<style scoped>
+    li{
+        border:1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 2rem;
+        margin-bottom: 1rem;
+    }
+    .rm{
+        background-color: red;
+        color: #fff;
+        border-radius: 50%;
+        font-weight: bold;
+    }
+</style>
