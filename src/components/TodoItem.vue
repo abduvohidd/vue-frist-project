@@ -2,7 +2,7 @@
     <li>
         <span :class="{done: todo.completed}">
             <input type="checkbox" @change="todo.completed = !todo.completed">
-            <strong>{{todo.id}}</strong>
+            <strong>{{index + 1}}</strong>
             {{todo.title}}
         </span>
         <button class="rm" @click="$emit('remove-todo', todo.id)">&times;</button>
@@ -17,7 +17,9 @@ export default{
         todo: {
             type: Object,
             required: false
-        }
+        },
+
+        index:Number
     }
 }
 </script>
