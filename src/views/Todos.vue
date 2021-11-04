@@ -93,4 +93,7 @@ export default {
 			justify-content: start;
 			display: flex;
 		}
+		select:focus{
+			color: gold;
+		}
 </style>
